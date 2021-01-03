@@ -4,7 +4,7 @@
             <div>
                 <section>
                     <h2>{{ with .Site.Params.footer.paragraph.headline }}{{ . | markdownify }}{{ end }}</h2>
-                    <p>{{ with .Site.Params.footer.paragraph.text }}{{ . | markdownify }}{{ end }}</p>
+                    <p>{{ with .Site.Params.footer.paragraph.text }}{{ . | safeHTML }}{{ end }}</p>
                 </section>
                 <section>
                     <h2>{{ with .Site.Params.footer.social.headline }}{{ . | markdownify }}{{ end }}</h2>
@@ -37,6 +37,9 @@
                                 <li><input type="reset" value="{{ .Site.Params.footer.contact.resetText }}" /></li>
                             </ul>
                         </form>
+                        <br><br>
+                        <h2>Vchod do domu</h2>
+                        <iframe src="https://www.google.com/maps/embed?pb=!4v1609701675405!6m8!1m7!1svW-aJLE_2NMlJ75N5_32EQ!2m2!1d49.2218403865369!2d16.58772624206177!3f248.5058059049421!4f13.256761191727037!5f0.7820865974627469" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                     </section>
                 </div>
             {{ end }}
